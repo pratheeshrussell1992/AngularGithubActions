@@ -25,8 +25,3 @@ jobs:
         with:
          name: buildFiles
          path: dist/
-      - name: Remove old artifacts
-        uses: c-hive/gha-remove-artifacts@v1
-        with:
-          age: '5 minutes'
-          skip-recent: 1
