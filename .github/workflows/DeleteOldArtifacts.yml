@@ -1,0 +1,10 @@
+name: Delete old Artifacts
+on: [workflow_dispatch]
+jobs:
+  Remove-artifacts:
+    steps:
+      - name: Remove old artifacts
+        uses: c-hive/gha-remove-artifacts@v1
+        with:
+          age: '5 minutes'
+          skip-recent: 1
