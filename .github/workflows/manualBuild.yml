@@ -11,13 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setting up Node
-      - uses: actions/setup-node@v2.1.2
+        uses: actions/setup-node@v2.1.2
         with:
          node-version: '14.15.0'
       - name: Installing Packages
-      - run: npm install
+        run: npm install
       - name: Running the build
-      - run: ng build --prod
+        run: ng build --prod
       - name: Collecting built files
         if: success() 
         uses: actions/upload-artifact@v2
