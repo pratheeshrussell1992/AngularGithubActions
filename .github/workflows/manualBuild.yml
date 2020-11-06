@@ -16,6 +16,7 @@ jobs:
          node-version: '14.15.0'
       - name: Installing Packages
         run: npm install
+      - run: npm link @angular/cli
       - name: Running the build
         run: ng build --prod
       - name: Collecting built files
