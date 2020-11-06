@@ -1,7 +1,8 @@
 name: Delete old Artifacts
 on: [workflow_dispatch]
 jobs:
-  Remove-artifacts:
+  Remove-old-artifacts:
+    runs-on: ubuntu-latest
     steps:
       - name: Remove old artifacts
         uses: c-hive/gha-remove-artifacts@v1
